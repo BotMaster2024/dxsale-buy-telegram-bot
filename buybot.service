@@ -1,0 +1,14 @@
+[Unit]
+Description=Retard dxsale buybot
+
+[Service]
+Type=simple
+WorkingDirectory=/home/buybot
+User=33
+Environment="DEBUG_DEPTH=6"
+Environment="DEBUG=action,index"
+ExecStart=/usr/bin/node /home/buybot/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
